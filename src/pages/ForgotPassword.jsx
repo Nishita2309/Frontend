@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Mail, ArrowLeft, Loader2 } from "lucide-react";
 import AuthLayout from "@/components/AuthLayout";
+import Base44SetupNotice from "@/components/Base44SetupNotice";
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -36,6 +37,8 @@ export default function ForgotPassword() {
         </Link>
       }
     >
+      <Base44SetupNotice />
+
       {sent ? (
         <p className="text-sm text-foreground text-center">
           If an account exists with that email, you'll receive a password reset link shortly.

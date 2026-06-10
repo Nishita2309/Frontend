@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Zap } from 'lucide-react';
+import { Menu, X, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -67,6 +68,12 @@ export default function Navbar() {
             </div>
 
             <div className="hidden lg:flex items-center gap-3">
+              <ThemeToggle />
+              <Link to="/login">
+                <Button variant="ghost" className="text-muted-foreground hover:text-foreground rounded-full px-4">
+                  Log in
+                </Button>
+              </Link>
               <Link to="/contact">
                 <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary/10 hover:border-primary/50 rounded-full px-6">
                   Book Consultation
@@ -79,12 +86,15 @@ export default function Navbar() {
               </Link>
             </div>
 
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 text-foreground"
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <div className="flex items-center gap-1 lg:hidden">
+              <ThemeToggle />
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className="p-2 text-foreground"
+              >
+                {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </motion.nav>
@@ -120,6 +130,11 @@ export default function Navbar() {
                   </motion.div>
                 ))}
                 <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-border">
+                  <Link to="/login">
+                    <Button variant="outline" className="w-full rounded-full">
+                      Log in
+                    </Button>
+                  </Link>
                   <Link to="/contact">
                     <Button className="w-full bg-gradient-to-r from-primary to-secondary text-white rounded-full glow-blue">
                       Get Started

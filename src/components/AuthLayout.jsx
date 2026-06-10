@@ -1,8 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Zap } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function AuthLayout({ icon: Icon, title, subtitle, footer, children }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-4">
+    <div className="min-h-screen flex items-center justify-center bg-background px-4 relative">
+      <div className="absolute top-4 right-4 flex items-center gap-2">
+        <ThemeToggle />
+      </div>
+      <Link to="/" className="absolute top-4 left-4 flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center">
+          <Zap className="w-4 h-4 text-white" />
+        </div>
+        <span className="font-heading font-semibold text-foreground">Tech Elite</span>
+      </Link>
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary mb-4">

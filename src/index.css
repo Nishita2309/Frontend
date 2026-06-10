@@ -34,24 +34,24 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 9%;
-    --popover-foreground: 210 40% 98%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
     --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
     --secondary: 263 70% 50%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 222 47% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
     --accent: 188 94% 43%;
     --accent-foreground: 210 40% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 222 30% 16%;
-    --input: 222 30% 16%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
     --ring: 221 83% 53%;
     --chart-1: 221 83% 53%;
     --chart-2: 263 70% 50%;
@@ -59,13 +59,13 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.75rem;
-    --sidebar-background: 222 47% 6%;
-    --sidebar-foreground: 210 40% 98%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 222 47% 11%;
     --sidebar-primary: 221 83% 53%;
     --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 222 47% 14%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 30% 16%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
     --sidebar-ring: 221 83% 53%;
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -127,7 +127,7 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: hsl(222 47% 6%);
+  background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
   background: hsl(221 83% 53% / 0.4);
@@ -156,14 +156,14 @@
 
 /* Glass effect */
 .glass {
-  background: hsl(222 47% 9% / 0.6);
+  background: hsl(var(--card) / 0.6);
   backdrop-filter: blur(16px);
-  border: 1px solid hsl(222 30% 16% / 0.5);
+  border: 1px solid hsl(var(--border) / 0.5);
 }
 .glass-strong {
-  background: hsl(222 47% 9% / 0.8);
+  background: hsl(var(--card) / 0.8);
   backdrop-filter: blur(24px);
-  border: 1px solid hsl(222 30% 16% / 0.6);
+  border: 1px solid hsl(var(--border) / 0.6);
 }
 
 /* Gradient text */

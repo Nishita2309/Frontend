@@ -1,0 +1,17 @@
+{
+  "name": "Tech Elite IT Solutions",
+  "short_name": "Tech Elite",
+  "description": "IT Solutions and Consulting",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
